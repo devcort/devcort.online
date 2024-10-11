@@ -1,0 +1,50 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const EXPERIENCE = [
+  {
+    date: "Actualmente...",
+    title: "Estudios",
+    company: "Universidad de Navojoa",
+    description:
+      "Me encuentro cursando el último año de mi carrera. A lo largo de este tiempo, he tenido la oportunidad de desarrollar diversos proyectos utilizando distintas tecnologías y aplicaciones, los cuales daremos a conocer próximamente.",
+  },
+  {
+    date: "Enero 2024",
+    title: "App Clubes",
+    company: "Universidad de Navojoa",
+    description:
+      "Se desarrolló una aplicación móvil para el registro de asistencia de los clubes de la Universidad de Navojoa, facilitando la gestión de la participación de los estudiantes en las actividades.",
+  },
+  {
+    date: "Septiembre 2024",
+    title: "Chat Bot UNAV",
+    company: "Facultad de Ingenería",
+    description:
+      "Se llevó a cabo un prototipo de un chatbot para la Universidad de Navojoa, diseñado para mejorar la interacción y el servicio a los estudiantes, facilitando el acceso a información y recursos de manera eficiente.",
+  },
+  {
+    date: "Mayo 2023",
+    title: "Desarrollador de Simulador de Fisica",
+    company: "Facultad de Ingenería",
+    description:
+      "Se realizó un prototipo de aplicaciones de escritorio con elementos visuales, donde los usuarios ingresan datos sobre problemas de Física I o Álgebra Lineal, dirigido a estudiantes de preparatoria de COLIVI.",
+  },
+  {
+    date: "Mayo 2023",
+    title: "Multimedia de ULV Virtual",
+    company: "ULV Virtual",
+    description:
+      "Se desarrolló contenido didáctico para los estudiantes, incluyendo la edición de videos y otros recursos educativos interactivos como los principios acercamientos de la programación",
+  },
+];
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>

@@ -1,0 +1,226 @@
+---
+import GitHub from "./icons/GitHub.astro";
+import NextJS from "./icons/NextJS.astro";
+import Youtube from "./icons/youtube.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import Link from "./icons/Link.astro";
+import LinkButton from "./LinkButton.astro";
+import ReactJS from "./icons/React.astro";
+import Html from "./icons/Html.astro";
+import Javascript from "./icons/Javascript.astro";
+import Css from "./icons/Css.astro";
+import Figma from "./icons/Figma.astro";
+import VisualStudio from "./icons/VisualStudio.astro";
+import CC from "./icons/CC.astro";
+import Sql from "./icons/Sql.astro";
+import Unity from "./icons/Unity.astro";
+import VisualCode from "./icons/VisualCode.astro";
+import Dart from "./icons/Dart.astro";
+import Flutter from "./icons/Flutter.astro";
+import Python from "./icons/Python.astro";
+
+const TAGS = {
+  NEXT: {
+    name: "Next.js",
+    class: "bg-black text-white",
+    icon: NextJS,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: Tailwind,
+  },
+  REACT: {
+    name: "React.Js",
+    class: "bg-[#003159] text-white",
+    icon: ReactJS,
+  },
+  HTML: {
+    name: "Html",
+    class: "bg-[#003159] text-white",
+    icon: Html,
+  },
+  CSS: {
+    name: "Css",
+    class: "bg-[#003159] text-white",
+    icon: Css,
+  },
+  JAVASCRIPT: {
+    name: "Javascript",
+    class: "bg-[#003159] text-white",
+    icon: Javascript,
+  },
+  FIGMA: {
+    name: "Figma",
+    class: "bg-[#003159] text-white",
+    icon: Figma,
+  },
+  VISUALSTUDIO: {
+    name: "Visual Studio",
+    class: "bg-[#003159] text-white",
+    icon: VisualStudio,
+  },
+  VISUALCODE: {
+    name: "Visual Code",
+    class: "bg-[#003159] text-white",
+    icon: VisualCode,
+  },
+  CC: {
+    name: "C#",
+    class: "bg-[#003159] text-white",
+    icon: CC,
+  },
+  SQL: {
+    name: "sql",
+    class: "bg-[#003159] text-white",
+    icon: Sql,
+  },
+  UNITY: {
+    name: "Unity",
+    class: "bg-[#003159] text-white",
+    icon: Unity,
+  },
+  DART: {
+    name: "Dart",
+    class: "bg-[#003159] text-white",
+    icon: Dart,
+  },
+  FLUTTER: {
+    name: "Flutter",
+    class: "bg-[#003159] text-white",
+    icon: Flutter,
+  },
+  PYTHON: {
+    name: "Python",
+    class: "bg-[#003159] text-white",
+    icon: Python,
+  },
+};
+const PROJECTS = [
+  {
+    title: "App Movil para Recordatorios",
+    description:
+      "Se desarrolló una aplicación para gestionar tareas pendientes mientras se aprendían los fundamentos de React.js en el desarrollo frontend.",
+    github: "https://github.com/devcort/Proyecto_React",
+    youtube: "https://youtu.be/TTvoGdt78zo",
+    image: "/projects/app-recordatorio.webp",
+    tags: [TAGS.REACT, TAGS.HTML, TAGS.JAVASCRIPT, TAGS.CSS, TAGS.FIGMA],
+  },
+  {
+    title: "Proptech",
+    description:
+      "Se implementó un sistema de administración inmobiliaria que permite el registro, gestión de amenidades, seguimiento y evaluación. El sistema sigue el modelo MVC y fue construido con el framework .NET 7.0, utilizando SQL Server como base de datos.",
+    github: "https://github.com/devcort/protech",
+    youtube: "https://youtu.be/2lm8c_ZyR_k",
+    image: "/projects/protech.webp",
+    tags: [TAGS.VISUALSTUDIO, TAGS.JAVASCRIPT, TAGS.CC, TAGS.SQL],
+  },
+  {
+    title: "Chat Bot UNAV",
+    description:
+      "Se desarrolló un chatbot para la Universidad de Navojoa, implementado con el modelo Llama 2, utilizando LMStudio. El servidor fue creado con Python y JavaScript.",
+    github: "https://github.com/devcort/chatbot_ia",
+    youtube: "https://youtu.be/I4gKyENtOLM",
+    image: "/projects/chatbot.webp",
+    tags: [TAGS.JAVASCRIPT, TAGS.CSS, TAGS.PYTHON],
+  },
+  {
+    title: " House 3D",
+    description:
+      "Es un prototipo de juego en 2D creado en Unity, donde el personaje se mueve en un entorno interactivo con animaciones.",
+    youtube: "https://youtu.be/nsLhFYfEWNw",
+    image: "/projects/house3d.webp",
+    tags: [TAGS.VISUALCODE, TAGS.UNITY, TAGS.CC],
+  },
+  {
+    title: "Island Bower",
+    description:
+      "Un juego desarrollado en Unity, cuyo objetivo es superar una serie de obstáculos y llegar a la bandera final.",
+    youtube: "https://youtu.be/rMGQxiwTDLA",
+    image: "/projects/island.webp",
+    tags: [TAGS.VISUALCODE, TAGS.UNITY, TAGS.CC],
+  },
+  {
+    title: "App Clubes",
+    description:
+      "Un prototipo de aplicación que permite gestionar un club, incluyendo un sistema CRUD, alimentado por una API.",
+    github: "https://github.com/devcort/app_clubes",
+    youtube: "https://youtu.be/-iM8fmL3Lnc",
+    image: "/projects/app-clubes.webp",
+    tags: [TAGS.DART, TAGS.FLUTTER],
+  },
+  {
+    title: "Modelado 3D",
+    description:
+      "Sección dedicada a la creación de modelos 3D de objetos como un barril, Bocho, una cabeza, un cohete y una mesa con juego de té, utilizando Maya Desk.",
+    link: "https://drive.google.com/drive/folders/1nbxmgg59zQdPXFkNaFILVqvpTxbubWmT?usp=sharing",
+    image: "/projects/mod3d.webp",
+    tags: [],
+  },
+];
+---
+
+<div class="flex flex-col gap-y-16">
+  {
+    PROJECTS.map(
+      ({ image, title, description, tags, link, github, youtube }) => (
+        <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+          <div class="w-full md:w-1/2">
+            <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+              <img
+                alt="Recién llegado vs 5 años en Nueva Zelanda"
+                class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+                loading="lazy"
+                src={image}
+              />
+            </div>
+          </div>
+
+          <div class="w-full md:w-1/2 md:max-w-lg">
+            <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+              {title}
+            </h3>
+            <div class="flex flex-wrap mt-2">
+              <ul class="flex flex-row mb-2 gap-x-2">
+                {tags.map((tag) => (
+                  <li>
+                    <span
+                      class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                    >
+                      <tag.icon class="size-4" />
+                      {tag.name}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+
+              <div class="mt-2 text-gray-700 dark:text-gray-400">
+                {description}
+              </div>
+              <footer class="flex items-end justify-start mt-4 gap-x-4">
+                {github && (
+                  <LinkButton href={github}>
+                    <GitHub class="size-6" />
+                    Code
+                  </LinkButton>
+                )}
+                {link && (
+                  <LinkButton href={link}>
+                    <Link class="size-4" />
+                    Preview
+                  </LinkButton>
+                )}
+                {youtube && (
+                  <LinkButton href={youtube}>
+                    <Youtube class="size-4" />
+                    Video
+                  </LinkButton>
+                )}
+              </footer>
+            </div>
+          </div>
+        </article>
+      )
+    )
+  }
+</div>
